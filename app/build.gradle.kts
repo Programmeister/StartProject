@@ -74,6 +74,7 @@ android {
 }
 
 dependencies {
+    implementation(project(":retrofit-result"))
     implementation(Dependencies.Androidx.CORE_KTX)
     implementation(Dependencies.Androidx.APPCOMPAT)
     implementation(Dependencies.Theme.MATERIAL)

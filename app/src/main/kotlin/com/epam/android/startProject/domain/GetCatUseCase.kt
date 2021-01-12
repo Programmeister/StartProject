@@ -9,7 +9,7 @@ import javax.inject.Inject
 class GetCatUseCase @Inject constructor(
     private val repository: CatsRepository
 ) {
-    fun getCats(): Flow<List<Cat>> {
+    suspend fun getCats(): Flow<List<Cat>> {
         return repository.getCats().map { list ->
             list.sortedBy { it.id }
         }

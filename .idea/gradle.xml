@@ -24,6 +24,8 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/dependencies" />
+            <option value="$PROJECT_DIR$/result" />
+            <option value="$PROJECT_DIR$/retrofit-result" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
