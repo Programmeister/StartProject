@@ -74,6 +74,7 @@ android {
 }
 
 dependencies {
+    implementation(project(":retrofit-result"))
     implementation(Dependencies.Androidx.CORE_KTX)
     implementation(Dependencies.Androidx.APPCOMPAT)
     implementation(Dependencies.Theme.MATERIAL)
@@ -100,6 +101,7 @@ dependencies {
     kapt(Dependencies.Hilt.HILT_KAPT_ANDROIDX)
 
     implementation(Dependencies.Kotlin.Coroutines.COROUTINES_CORE)
+    implementation(Dependencies.Kotlin.Coroutines.COROUTINES_ANDROID)
     implementation(Dependencies.Kotlin.Serialization.SERIALIZATION_CORE)
 
     implementation(Dependencies.Retrofit.INTERSEPTOR)
