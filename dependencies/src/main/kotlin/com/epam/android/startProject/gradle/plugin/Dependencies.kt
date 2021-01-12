@@ -52,9 +52,11 @@ class DependenciesPlugin : Plugin<Project> {
 
         object Test {
             const val JUNIT = "junit:junit:4.13.1"
+            const val MOCKK = "io.mockk:mockk:1.10.4"
 
             object Spek {
                 private const val SPEK_VERSION = "2.0.15"
+
                 const val SPEK_DSL_JVM =
                         "org.spekframework.spek2:spek-dsl-jvm:$SPEK_VERSION"
                 const val SPEK_RUNNER_JUNIT5 =
@@ -71,6 +73,8 @@ class DependenciesPlugin : Plugin<Project> {
             const val FRAGMENT = "androidx.fragment:fragment-ktx:1.2.5"
             const val PREFERENCE = "androidx.preference:preference:1.1.1"
 
+//            const val SECURITY_CRYPTO = "androidx.security:security-crypto:1.0.0-rc03"
+
             object Lifecycle {
                 private const val LIFECYCLE_VERSION = "2.2.0"
                 const val LIFECYCLE_EXTENSIONS =
@@ -79,14 +83,14 @@ class DependenciesPlugin : Plugin<Project> {
                         "androidx.lifecycle:lifecycle-viewmodel-ktx:$LIFECYCLE_VERSION"
             }
 
-            //            const val SECURITY_CRYPTO = "androidx.security:security-crypto:1.0.0-rc03"
-
             object Navigation {
-                private const val navigationVersion = "2.3.2"
+                private const val NAVIGATION_VERSION = "2.3.2"
 
                 const val NAVIGATION_FRAGMENT =
-                        "androidx.navigation:navigation-fragment-ktx:$navigationVersion"
-                const val NAVIGATION_UI = "androidx.navigation:navigation-ui-ktx:$navigationVersion"
+                        "androidx.navigation:navigation-fragment-ktx:$NAVIGATION_VERSION"
+                const val NAVIGATION_UI = "androidx.navigation:navigation-ui-ktx:$NAVIGATION_VERSION"
+                const val NAVIGATION_DYNAMIC_FEATURES =
+                        "androidx.navigation:navigation-dynamic-features-fragment:$NAVIGATION_VERSION"
             }
 
             object Room {

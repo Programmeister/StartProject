@@ -7,6 +7,7 @@ import androidx.fragment.app.viewModels
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.epam.android.startProject.R
 import com.epam.android.startProject.databinding.FragmentHomeBinding
+import com.epam.android.startProject.vm.HomeViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

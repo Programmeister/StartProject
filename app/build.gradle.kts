@@ -27,7 +27,7 @@ android {
         versionCode = 1
         versionName = "1.0"
 
-        testInstrumentationRunner(Dependencies.Androidx.Test.TEST_INSTRUMENTATION_RUNNER)
+        testInstrumentationRunner = Dependencies.Androidx.Test.TEST_INSTRUMENTATION_RUNNER
     }
 
     buildTypes {
@@ -54,7 +54,7 @@ android {
         it.java.srcDir("src/${it.name}/kotlin")
     }
 
-//    testOptions {
+    testOptions {
 //        junitPlatform {
 //            filters {
 //                engines {
@@ -70,7 +70,7 @@ android {
 //        unitTests.all {
 //            testLogging.events = ["passed", "skipped", "failed"]
 //        }
-//    }
+    }
 }
 
 dependencies {
@@ -88,6 +88,7 @@ dependencies {
 
     implementation(Dependencies.Androidx.Navigation.NAVIGATION_FRAGMENT)
     implementation(Dependencies.Androidx.Navigation.NAVIGATION_UI)
+    implementation(Dependencies.Androidx.Navigation.NAVIGATION_DYNAMIC_FEATURES)
 
     implementation(Dependencies.Androidx.Room.ROOM_RUNTIME)
     kapt(Dependencies.Androidx.Room.ROOM_COMPILER)
@@ -109,6 +110,7 @@ dependencies {
     implementation(Dependencies.TIMBER)
 
     testImplementation(Dependencies.Test.JUNIT)
+    testImplementation(Dependencies.Test.MOCKK)
     androidTestImplementation(Dependencies.Androidx.Test.JUNIT)
     androidTestImplementation(Dependencies.Androidx.Test.ESPRESSO_CORE)
 
