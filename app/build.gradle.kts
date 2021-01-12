@@ -104,9 +104,10 @@ dependencies {
     implementation(Dependencies.Kotlin.Coroutines.COROUTINES_ANDROID)
     implementation(Dependencies.Kotlin.Serialization.SERIALIZATION_CORE)
 
-    implementation(Dependencies.Retrofit.INTERSEPTOR)
-    implementation(Dependencies.Retrofit.RETROFIT)
-    implementation(Dependencies.Retrofit.SERIALIZATION_CONVERTER)
+    implementation(Dependencies.Network.COIL)
+    implementation(Dependencies.Network.INTERSEPTOR)
+    implementation(Dependencies.Network.RETROFIT)
+    implementation(Dependencies.Network.SERIALIZATION_CONVERTER)
 
     implementation(Dependencies.VIEW_BINDING_PROPERTY_DELEGATE)
     implementation(Dependencies.TIMBER)

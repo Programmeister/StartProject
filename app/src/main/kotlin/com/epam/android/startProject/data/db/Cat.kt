@@ -6,6 +6,6 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "cats")
 data class Cat(
     @PrimaryKey
-    val id: Int,
+    val id: String,
     val url: String
 )
