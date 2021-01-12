@@ -8,6 +8,7 @@ import com.epam.android.startProject.R
 import com.epam.android.startProject.data.api.CatsService
 import com.epam.android.startProject.data.db.Cat
 import com.epam.android.startProject.data.db.CatsDao
+import com.epam.android.startProject.data.utli.mapper.CatsMapper
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -19,6 +20,7 @@ import javax.inject.Inject
 class CatsRepositoryImpl @Inject constructor(
     private val api: CatsService,
     private val dao: CatsDao,
+    private val catsMapper: CatsMapper,
     @ApplicationContext private val appContext: Context
 ) : CatsRepository {
 
@@ -34,7 +36,9 @@ class CatsRepositoryImpl @Inject constructor(
         withContext(Dispatchers.IO) {
             val result = api.getCats()
             if (result.isSuccess()) {
-                dao.addCats(result.asSuccess().value)
+                val list = result.asSuccess().value
+                val cats = catsMapper.map(list)
+                dao.addCats(cats)
             } else {
                 Toast.makeText(
                     appContext,

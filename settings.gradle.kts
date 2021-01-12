@@ -1,5 +1,5 @@
 includeBuild("dependencies")
-include(":app")
 include(":result")
 include(":retrofit-result")
+include(":app")
 rootProject.name = "StartProject"

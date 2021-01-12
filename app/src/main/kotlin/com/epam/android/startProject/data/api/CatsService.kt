@@ -11,5 +11,5 @@ interface CatsService {
     suspend fun getCats(
         @Header("x-api-key") apiKey: String = "5156228e-2221-4250-b1e1-27c7f4661762",
         @Query("limit") limit: Int = 30
-    ): Result<List<Cat>>
+    ): Result<List<ApiCat>>
 }

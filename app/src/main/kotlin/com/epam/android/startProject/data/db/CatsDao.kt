@@ -12,5 +12,5 @@ interface CatsDao {
     suspend fun addCats(cats: List<Cat>)
 
     @Query("SELECT * FROM cats")
-    suspend fun getCats(): Flow<List<Cat>>
+    fun getCats(): Flow<List<Cat>>
 }
