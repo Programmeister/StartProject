@@ -45,7 +45,8 @@ class DependenciesPlugin : Plugin<Project> {
             const val HILT_VIEW_MODEL = "androidx.hilt:hilt-lifecycle-viewmodel:$hiltAndroidxVersion"
         }
 
-        object Retrofit {
+        object Network {
+            const val COIL = "io.coil-kt:coil:1.1.1"
             const val INTERSEPTOR = "com.squareup.okhttp3:logging-interceptor:4.9.0"
             const val RETROFIT = "com.squareup.retrofit2:retrofit:2.9.0"
             const val SERIALIZATION_CONVERTER =

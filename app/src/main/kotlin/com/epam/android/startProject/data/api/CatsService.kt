@@ -1,7 +1,6 @@
 package com.epam.android.startProject.data.api
 
 import by.kirich1409.result.Result
-import com.epam.android.startProject.data.db.Cat
 import retrofit2.http.GET
 import retrofit2.http.Header
 import retrofit2.http.Query

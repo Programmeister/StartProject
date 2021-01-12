@@ -2,13 +2,12 @@ package com.epam.android.startProject.data.repository
 
 import android.content.Context
 import android.widget.Toast
+import by.kirich1409.result.asFailure
 import by.kirich1409.result.asSuccess
 import by.kirich1409.result.isSuccess
-import com.epam.android.startProject.R
 import com.epam.android.startProject.data.api.CatsService
 import com.epam.android.startProject.data.db.Cat
 import com.epam.android.startProject.data.db.CatsDao
-import com.epam.android.startProject.data.repository.CatsRepository
 import com.epam.android.startProject.data.utli.mapper.CatsMapper
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CoroutineScope
@@ -41,18 +40,18 @@ class CatsRepositoryImpl @Inject constructor(
                 val cats = catsMapper.map(list)
                 dao.addCats(cats)
             } else {
-                Toast.makeText(
-                    appContext,
-                    appContext.getString(R.string.loading_error),
-                    Toast.LENGTH_LONG
-                ).show()
+                withContext(Dispatchers.Main) {
+                    Toast.makeText(
+                        appContext,
+                        result.asFailure().error.toString(),
+                        Toast.LENGTH_LONG
+                    ).show()
+                }
             }
         }
     }
 
-    override suspend fun getCats(): Flow<List<Cat>> {
-        return withContext(Dispatchers.IO) {
-            dao.getCats()
-        }
+    override fun getCats(): Flow<List<Cat>> {
+        return dao.getCats()
     }
 }
