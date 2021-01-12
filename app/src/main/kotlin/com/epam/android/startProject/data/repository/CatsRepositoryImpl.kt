@@ -1,4 +1,4 @@
-package com.epam.android.startProject.data
+package com.epam.android.startProject.data.repository
 
 import android.content.Context
 import android.widget.Toast
@@ -8,6 +8,7 @@ import com.epam.android.startProject.R
 import com.epam.android.startProject.data.api.CatsService
 import com.epam.android.startProject.data.db.Cat
 import com.epam.android.startProject.data.db.CatsDao
+import com.epam.android.startProject.data.repository.CatsRepository
 import com.epam.android.startProject.data.utli.mapper.CatsMapper
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CoroutineScope

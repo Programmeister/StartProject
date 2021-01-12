@@ -1,7 +1,7 @@
 package com.epam.android.startProject.data.di
 
-import com.epam.android.startProject.data.CatsRepository
-import com.epam.android.startProject.data.CatsRepositoryImpl
+import com.epam.android.startProject.data.repository.CatsRepository
+import com.epam.android.startProject.data.repository.CatsRepositoryImpl
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
