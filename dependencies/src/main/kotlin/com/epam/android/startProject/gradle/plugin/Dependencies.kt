@@ -33,6 +33,7 @@ class DependenciesPlugin : Plugin<Project> {
                         "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.1"
                 const val COROUTINES_ANDROID =
                     "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9"
+                const val COROUTINES_TEST = "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.4.2"
             }
         }
 

@@ -9,7 +9,7 @@ plugins {
     id("androidx.navigation.safeargs.kotlin")
     id("dagger.hilt.android.plugin")
     id("kotlin-android")
-//    id("de.mannodermaus.android-junit5")
+    id("de.mannodermaus.android-junit5")
 }
 
 repositories {
@@ -54,7 +54,7 @@ android {
         it.java.srcDir("src/${it.name}/kotlin")
     }
 
-    testOptions {
+//    testOptions {
 //        junitPlatform {
 //            filters {
 //                engines {
@@ -70,7 +70,7 @@ android {
 //        unitTests.all {
 //            testLogging.events = ["passed", "skipped", "failed"]
 //        }
-    }
+//    }
 }
 
 dependencies {
@@ -117,8 +117,9 @@ dependencies {
     androidTestImplementation(Dependencies.Androidx.Test.JUNIT)
     androidTestImplementation(Dependencies.Androidx.Test.ESPRESSO_CORE)
 
-//    implementation(Dependencies.Kotlin.KOTLIN_STD_LIB_JDK8)
-//    testImplementation(Dependencies.Kotlin.KOTLIN_REFLECT)
-//    testImplementation(Dependencies.Test.Spek.SPEK_DSL_JVM)
-//    testImplementation(Dependencies.Test.Spek.SPEK_RUNNER_JUNIT5)
+    implementation(Dependencies.Kotlin.KOTLIN_STD_LIB_JDK8)
+    testImplementation(Dependencies.Kotlin.KOTLIN_REFLECT)
+    testImplementation(Dependencies.Test.Spek.SPEK_DSL_JVM)
+    testImplementation(Dependencies.Test.Spek.SPEK_RUNNER_JUNIT5)
+    testImplementation (Dependencies.Kotlin.Coroutines.COROUTINES_TEST)
 }
