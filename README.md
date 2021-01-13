@@ -13,7 +13,7 @@ Kotlin DSL for build scripts. Codestyle settings (ktlint, detekt).
 * Coil (Loading image)
 * Timber
 * Spek (Test)
-* [ViewBinding Property Delegate](https://github.com/kirich1409/ViewBindingPropertyDelegate)
+* [ViewBindingPropertyDelegate](https://github.com/kirich1409/ViewBindingPropertyDelegate)
 * [AsyncResult](https://github.com/androidbroadcast/AsyncResult)
 ### Contributors
 Created by students of the epam laboratory.
